@@ -83,13 +83,6 @@ Analytics and reconciliation pipelines for payments, orders, engagement, and acq
 
 ## Featured Personal Projects
 
-### uweb-socket
-
-Lightweight, high-performance WebSocket experimentation and utilities built on top of the µWebSockets ecosystem.
-
-- **Technologies:** Node.js, TypeScript, µWebSockets, Redis
-- **Concepts:** Low-latency real-time communication, connection lifecycle management, backpressure handling, and horizontal scaling patterns for WebSocket workloads
-
 ### LIMS-APP
 
 A modern **Laboratory Information Management System (LIMS)** designed for **Testing, Inspection & Certification (TIC)** laboratories, digitizing the complete lifecycle from client onboarding and sample intake to testing, quality approval, reporting, and invoicing.
@@ -113,6 +106,29 @@ Built to replace spreadsheet-driven operations with a scalable, multi-tenant pla
 - RESTful APIs with DTO validation and repository pattern
 - Redis-backed caching for frequently accessed reference data
 - Extensible architecture for future instrument integrations and regulatory rule engines
+
+### uweb-socket
+
+A high-performance real-time WebSocket gateway built with **NestJS** and **uWebSockets.js**, designed to deliver low-latency, event-driven communication for interactive applications.
+
+The gateway consumes Kafka event streams and efficiently broadcasts updates to connected clients, supporting real-time features such as chat, schedules, notifications, reactions, collaborative sessions, and dynamic event subscriptions.
+
+**Technologies**
+- Node.js
+- TypeScript
+- NestJS
+- uWebSockets.js
+- Kafka
+- Redis
+
+**Engineering Highlights**
+- High-throughput WebSocket server optimized for low latency
+- Kafka-driven event broadcasting
+- Topic-based subscription management
+- Connection lifecycle and session management
+- Horizontal scalability with Redis
+- Modular gateway architecture
+- Production-ready logging, monitoring, and error handling
 
 ### omnichannel-notification
 

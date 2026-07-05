@@ -93,7 +93,7 @@ Built to replace spreadsheet-driven operations with a scalable, multi-tenant pla
 - Node.js
 - TypeScript
 - NestJS
-- MongoDB
+- Postgres
 - Redis
 
 **Engineering Highlights**

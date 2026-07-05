@@ -89,8 +89,8 @@ Contributing and following work in the NestJS, KafkaJS, ioredis, BullMQ, and Unl
 
 ## Contact
 
-- Email — your.email@example.com
-- LinkedIn — [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+- Email — biswaranjan6286@gmail.com
+- LinkedIn — [linkedin.com/Biswaranjan](https://www.linkedin.com/in/biswaranjan-samal-80b625212)
 - GitHub — [github.com/your-username](https://github.com/your-username)
 - Location — Noida, India
 

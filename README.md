@@ -1,97 +1,186 @@
 # Biswaranjan Samal
 
-**Senior Backend Engineer · Distributed Systems · Platform Engineering**
+**Senior Backend Engineer — Distributed Systems · Platform Engineering · Commerce & Payments**
 
-Building high-throughput, event-driven backend platforms for commerce, payments, and identity at scale.
-
----
-
-## About Me
-
-I design and operate production backend systems that power revenue-critical commerce, payments, and acquisition flows. My work sits at the intersection of distributed systems, API platforms, and reliability engineering — building services that stay fast and correct under real production load.
-
-Currently focused on scalable microservices architecture, event-driven pipelines, API gateway design, and platform standardization that reduces cross-team engineering overhead.
-
-- 4+ years building production backend systems across commerce, payments, notifications, and identity
-- Led the first organization-wide Kong API Gateway rollout, standardizing auth, CORS, and rate limiting into shared plugins
-- Owned auth infrastructure sustaining 500K+ requests/min at p99 under 100ms
-- Architected omnichannel notification platform processing 1M+ messages/day
+Noida, India
 
 ---
 
-## Technology Stack
+## About
+
+Senior Backend Engineer with 4+ years of experience designing and operating large-scale backend platforms and distributed systems. My work spans identity, commerce, payments, notifications, CRM automation, and analytics — with a strong focus on scalability, event-driven architecture, and production reliability.
+
+I care about the parts of engineering that survive scale: clear service boundaries, safe rollouts, idempotent workflows, and observability that makes production debuggable at 2 AM.
+
+- 4+ years of production backend engineering across commerce, payments, identity, and platform systems
+- Deep experience with Node.js, TypeScript, NestJS, MongoDB, Redis, Kafka, PostgreSQL, ClickHouse, and Kubernetes
+- Led organization-wide platform initiatives including the first Kong API Gateway rollout
+- Comfortable owning services end-to-end: design, implementation, deployment, on-call, and iteration
+
+---
+
+## Professional Platform Experience
+
+These platforms were designed and developed as part of my professional experience. Due to intellectual property and confidentiality agreements, the implementation is private. The descriptions below summarize the architecture, engineering challenges, and business impact.
+
+### Ambassador Platform — ₹250Cr+ revenue
+
+Referral-driven acquisition platform with onboarding, KYC, assisted sales, commission calculation, and payout orchestration.
+
+- **Architecture:** NestJS microservices with MongoDB, Redis, Kafka, and S3; event-driven attribution to decouple sales ingestion from commission and payout processing
+- **Challenges:** Concurrent sales attribution, commission consistency under peak traffic, and idempotent event handling
+- **Impact:** Attributed ₹250Cr+ in revenue and supported 3x MAU growth across acquisition funnels
+
+### Refer & Earn Platform — ₹100Cr+ revenue
+
+Referral, reward, and coupon-attribution system integrated with acquisition, orders, and notifications.
+
+- **Architecture:** Event-driven referral tracking on Kafka with Redis-backed dedup and cache layers
+- **Challenges:** Reliable attribution across delayed events, fraud-resistant referral windows, and cross-service consistency
+- **Impact:** Contributed ₹100Cr+ in revenue and reduced manual reward operations
+
+### Identity & Authentication Platform — 500K+ req/min
+
+High-throughput authentication platform for login, OTP, registration, and user journeys.
+
+- **Architecture:** Node.js, TypeScript, HyperExpress, MongoDB, Redis, Kafka on Kubernetes (CAST AI spot capacity) with rate limiting and cache-first user lookups
+- **Challenges:** Sustaining p99 under 100ms at 500K+ requests/min while balancing cost and reliability
+- **Impact:** Stable auth availability across peak traffic events with disciplined incident response
+
+### Omnichannel Notification Platform — 1M+ notifications/day
+
+Multi-channel notification platform spanning push, SMS, WhatsApp, and email.
+
+- **Architecture:** Kafka topics per channel with asynchronous workers, vendor failover, retries, DLQs, template caching in Redis, and delivery tracking in MongoDB
+- **Challenges:** Vendor variability, at-least-once delivery, dedup, and reliable observability across channels
+- **Impact:** Processed 1M+ notifications/day at greater than 99.9% delivery success
+
+### Payments & Order Management Platform
+
+Modular payment, coupon, wallet, invoice, and order platform integrating multiple payment providers.
+
+- **Architecture:** NestJS services with MongoDB, Redis, PostgreSQL/Prisma, Kafka, and SQS; strategy-based gateway abstraction for Razorpay, Paytm, Juspay, ICICI, Apple IAP, and CSC Wallet
+- **Challenges:** Idempotent transactions, webhook reconciliation, distributed locking, and gateway-agnostic checkout flows
+- **Impact:** Reliable checkout across providers with reduced gateway-specific coupling and improved reconciliation
+
+### Kong API Gateway — Organization-wide rollout
+
+First Kong API Gateway implementation in the organization, standardizing cross-cutting concerns across microservices.
+
+- **Architecture:** Centralized authentication, CORS, rate limiting, and routing as reusable plugins; declarative route and plugin management
+- **Challenges:** Zero-downtime migration, plugin ordering, and coordinated adoption across independent service teams
+- **Impact:** Eliminated duplicated cross-cutting logic and standardized API security, governance, and onboarding for all backend services
+
+### Analytics, Reporting & Event Automation Platform
+
+Analytics and reconciliation pipelines for payments, orders, engagement, and acquisition events.
+
+- **Architecture:** Kafka to ClickHouse ingestion with Trino for federated queries and Airflow-orchestrated batch reconciliation
+- **Challenges:** Separating OLTP from OLAP paths, ensuring pipeline reliability, and automating fee attribution and CRM triggers across 10M+ user profiles
+- **Impact:** Automated reporting and reconciliation while reducing manual operational effort for finance and operations teams
+
+---
+
+## Featured Personal Projects
+
+### uweb-socket
+
+Lightweight, high-performance WebSocket experimentation and utilities built on top of the µWebSockets ecosystem.
+
+- **Technologies:** Node.js, TypeScript, µWebSockets, Redis
+- **Concepts:** Low-latency real-time communication, connection lifecycle management, backpressure handling, and horizontal scaling patterns for WebSocket workloads
+
+### LIMS-APP
+
+A modern **Laboratory Information Management System (LIMS)** designed for **Testing, Inspection & Certification (TIC)** laboratories, digitizing the complete lifecycle from client onboarding and sample intake to testing, quality approval, reporting, and invoicing.
+
+Built to replace spreadsheet-driven operations with a scalable, multi-tenant platform supporting ISO/IEC 17025-compliant workflows, audit trails, barcode-based sample tracking, client self-service portals, and configurable testing protocols.
+
+**Technologies**
+- Node.js
+- TypeScript
+- NestJS
+- MongoDB
+- Redis
+
+**Engineering Highlights**
+- Multi-tenant SaaS architecture with tenant isolation
+- Modular NestJS architecture following Domain-Driven Design principles
+- Role-Based Access Control (RBAC) and workflow-driven authorization
+- Barcode-enabled sample lifecycle and chain-of-custody tracking
+- Template-driven test protocol and report generation
+- Audit logging for compliance and traceability
+- RESTful APIs with DTO validation and repository pattern
+- Redis-backed caching for frequently accessed reference data
+- Extensible architecture for future instrument integrations and regulatory rule engines
+
+### omnichannel-notification
+
+Personal exploration of an omnichannel notification service supporting multiple delivery channels through a pluggable vendor architecture.
+
+- **Technologies:** Node.js, TypeScript, NestJS, Kafka, Redis
+- **Concepts:** Event-driven fan-out, vendor strategy pattern, retry and DLQ handling, template management, and delivery observability
+
+---
+
+## Tech Stack
 
 **Languages** — TypeScript, JavaScript, Node.js, Go, SQL, Python
 
-**Backend** — NestJS, Express.js, HyperExpress, REST APIs, gRPC concepts, Clean Architecture, DDD
+**Backend** — NestJS, Express.js, HyperExpress, REST APIs, Clean Architecture, Domain-Driven Design
 
-**Datastores** — MongoDB, PostgreSQL, Redis, ClickHouse
+**Databases** — MongoDB, PostgreSQL, Redis, ClickHouse
 
-**Messaging & Data** — Kafka, KafkaJS, SQS, Trino, Airflow, dbt
+**Messaging** — Kafka, KafkaJS, SQS, BullMQ
 
-**Cloud & Infra** — AWS, Kubernetes, Docker, Kong API Gateway, CAST AI, CI/CD, canary deployments
+**Cloud** — AWS, Kubernetes, Docker, Kong API Gateway, CAST AI, CI/CD, canary deployments
 
-**Observability** — Datadog, Elastic APM, OpenTelemetry, Pino, structured logging
+**Observability** — Datadog, Elastic APM, OpenTelemetry, Pino, structured logging, alerting, dashboards
 
----
-
-## Featured Projects
-
-**[api-gateway](#)** — Plugin-based API gateway inspired by Kong. Reusable auth, CORS, and rate-limiting plugins with dynamic route configuration.
-
-**[auth-service](#)** — Scalable authentication microservice with JWT rotation, OTP flows, Redis-backed sessions, and RBAC — modeled after 500K req/min production systems.
-
-**[payment-gateway-abstraction](#)** — Multi-provider payment orchestration using the strategy pattern, idempotency keys, webhook reconciliation, and a PostgreSQL transaction ledger.
-
-**[notification-platform](#)** — Kafka-driven omnichannel notification system with retries, DLQs, vendor failover, and delivery observability across email, SMS, and push.
-
-**[distributed-rate-limiter](#)** — Redis-backed sliding window and token bucket rate limiter, deployable as a NestJS middleware or standalone service.
-
-**[event-analytics-pipeline](#)** — Kafka to ClickHouse ingestion with Airflow-orchestrated reconciliation and Trino-based analytical queries.
+**Architecture** — Distributed Systems, Event-Driven Architecture, API Gateway Design, Caching, Idempotency, Fault Tolerance, High Availability
 
 ---
 
 ## Engineering Philosophy
 
-- **Design for failure.** Retries, idempotency, timeouts, and circuit breakers are not optional.
-- **Own the system, not just the code.** Alerts, dashboards, and runbooks belong to the author.
-- **Keep the boring parts sharp.** Clean logs, clear contracts, and small, reversible changes.
-- **Optimize the platform, not the feature.** Reusable primitives compound across teams.
-- **Trade-offs over trends.** Every choice has a cost — write it down in an ADR.
-
----
-
-## System Design Interests
-
-- Event-driven architecture, sagas, and the outbox pattern
-- API gateway and service mesh design trade-offs
-- Idempotency and exactly-once semantics in payment systems
-- High-throughput authentication and session management
-- OLTP/OLAP separation with Kafka, ClickHouse, and Trino
-- Multi-tenant SaaS backend patterns and rollout strategies
-
----
-
-## Open Source Interests
-
-Contributing and following work in the NestJS, KafkaJS, ioredis, BullMQ, and Unleash ecosystems. Interested in improving developer experience around observability, resilience patterns, and API gateway plugins.
+- **Design for failure.** Retries, timeouts, idempotency, and circuit breakers are part of the design, not an afterthought.
+- **Own the system, not just the code.** Alerts, dashboards, runbooks, and rollout plans belong to the author.
+- **Clean architecture.** Clear boundaries between domain, application, and infrastructure — so the system stays changeable.
+- **Reusable platforms.** Solve cross-cutting concerns once at the platform layer; every team benefits.
+- **Simplicity over unnecessary complexity.** The best system is the smallest one that meets the SLA.
 
 ---
 
 ## Currently Learning
 
-- Event sourcing and CQRS in production commerce systems
-- OpenTelemetry-based distributed tracing at scale
+- Event Sourcing and its application in commerce and payment systems
+- CQRS patterns for read/write separation at scale
 - Rust for performance-critical backend components
-- Advanced Kubernetes patterns: operators, controllers, and progressive delivery
+- Advanced Kubernetes: operators, controllers, and progressive delivery
+- Distributed tracing and OpenTelemetry-based observability
+
+---
+
+## Open Source Interests
+
+Following and interested in contributing to work across:
+
+- NestJS
+- KafkaJS
+- BullMQ
+- OpenTelemetry
+- Redis
+- Kubernetes
+
+Focus areas: reliability primitives, observability, and developer experience for backend platforms.
 
 ---
 
 ## Contact
 
-- Email — biswaranjan6286@gmail.com
-- LinkedIn — [linkedin.com/Biswaranjan](https://www.linkedin.com/in/biswaranjan-samal-80b625212)
-- GitHub — [github.com/your-username](https://github.com/your-username)
-- Location — Noida, India
+- **Location** — Noida, India
+- **LinkedIn** — [linkedin.com/Biswaranjan](https://www.linkedin.com/in/biswaranjan-samal-80b625212)
+- **Email** — biswaranjan6286@gmail.com
+- **GitHub** — [github.com/Biswaranjan](https://github.com/MrBiswa)
 
-Open to Senior Backend Engineer and Platform Engineering conversations.
+Open to conversations about Senior Backend Engineer and Platform Engineering roles.
